@@ -1,0 +1,17 @@
+※ WEB-INF 폴더 아래의 lib 폴더에 아래의 드라이버 파일을 복사해 넣는다.
+ibatis-sqlmap-2.3.4.726.jar => ibatis 드라이버 => 필수
+
+※ 사용하려 하는 DBMS 드라이버 파일을 복사해 넣는다.
+ojdbc6-12.1.0.1-atlassian-hosted.jar => oracle 드라이버 => 선택
+mysql-connector-java-5.1.27-bin.jar => mysql 드라이버 => 선택
+
+※ jstl을 사용하기 위해 드라이버 파일을 복사해 넣는다.
+jstl-1.2.jar => jstl 드라이버 => 선택
+
+※ src 폴더에 적당한 이름(kr.koreait.ibatis)으로 패키지를 만들고 ibatis 설정을 한다.
+db.properties => 데이터베이스 연결 정보(드라이버, url, user, password)
+gueatbook.xml => 데이터베이스에 연결한 후 실행할 sql 명령, DOCTYPE이 sqlMap이다.
+              => 일반적으로 sql 명령을 실행할 테이블 이름을 파일 이름으로 한다.
+SqlMapConfig.xml => properties 파일과 실행할 sql 명령이 작성되는 파일을 알려준다.
+MyAppSqlConfig => SqlMapConfig.xml 파일의 설정 정보를 참고해서 mapper를 만든다.
+
